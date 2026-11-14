@@ -1,0 +1,37 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+		{
+			"label": "Build Android development APK (EAS)",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"--yes",
+				"eas-cli",
+				"build",
+				"--platform",
+				"android",
+				"--profile",
+				"development",
+				"--non-interactive"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		},
+		{
+			"label": "Build web export",
+			"type": "shell",
+			"command": "npx",
+			"args": [
+				"expo",
+				"export",
+				"--platform",
+				"web"
+			],
+			"isBackground": false,
+			"problemMatcher": [],
+			"group": "build"
+		}
+	]
+}
